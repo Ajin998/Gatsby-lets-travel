@@ -1,0 +1,36 @@
+.header__main_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+
+}
+
+.header__logo__img {
+    width: 10vw;
+    border-radius: 50%;
+    margin-left: 20px;
+    cursor: context-menu;
+}
+
+.header__nav_links {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    padding: 25px;
+
+}
+
+.navlinks {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.navlinks:hover {
+    outline: solid rgb(138, 171, 209);
+}
+
+.navlinks:active {
+    background-color: #004871;
+}
