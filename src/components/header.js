@@ -14,11 +14,11 @@ const header = () => {
         />
       </div>
       <div className={styles["header__nav_links"]}>
-        <Link to="/about" className={styles["navlinks"]}>
-          About_Us
-        </Link>
         <Link to="/" className={styles["navlinks"]}>
           Home
+        </Link>
+        <Link to="/about" className={styles["navlinks"]}>
+          About_Us
         </Link>
         <Link to="/contactUs" className={styles["navlinks"]}>
           Contact Us
