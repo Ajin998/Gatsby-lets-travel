@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "My Gatsby Site",
+    title: "Image Gallery",
+    author: "Ajin Varghese",
+    year: 2021,
   },
   plugins: [
     "gatsby-plugin-sharp",
