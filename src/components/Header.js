@@ -1,16 +1,27 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styles from "../styles/header.module.css";
-import logo from "../images/header__logo.png";
-const header = () => {
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      imgLogo: file(relativePath: { eq: "headerLogo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <div className={styles["header__main_div"]}>
       <div className={styles["header__logo"]}>
-        <img
-          src={logo}
+        <Img
+          fluid={data.imgLogo.childImageSharp.fluid}
+          alt="header_logo"
           className={styles["header__logo__img"]}
-          alt="image for header"
         />
       </div>
       <div className={styles["header__nav_links"]}>
@@ -27,5 +38,4 @@ const header = () => {
     </div>
   );
 };
-
-export default header;
+export default Header;
